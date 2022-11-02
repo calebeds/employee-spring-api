@@ -15,15 +15,15 @@ public class InMemoryEmployeeRepository {
         DATABASE.add(new Employee(2, "Alex", "Raymond", "alex@email.com"));
         DATABASE.add(new Employee(3, "David", "Cameron", "david@email.com"));
     }
-    void addEmployee(Employee employee) {
+    public void addEmployee(Employee employee) {
         DATABASE.add(employee);
     };
 
-    List<Employee> getAllEmployees(){
+    public List<Employee> getAllEmployees(){
         return List.copyOf(DATABASE);
     };
 
-    Employee findById(Integer id) {
+    public Employee findById(Integer id) {
         return DATABASE
                 .stream()
                 .filter(employee -> id.equals(employee.getId()))
@@ -31,12 +31,12 @@ public class InMemoryEmployeeRepository {
                 .orElseThrow();
     };
 
-    void updateEmployee(Employee employee) {
+    public void updateEmployee(Employee employee) {
         if(findById(employee.getId()) != null)
             DATABASE.add(employee.getId(), employee);
     };
 
-    Boolean deleteById(Integer id) {
+    public Boolean deleteById(Integer id) {
       if(findById(id) != null) {
           DATABASE.remove(id);
           return Boolean.TRUE;
