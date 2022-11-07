@@ -4,12 +4,14 @@ import com.calebe.apiapplication.domain.Employee;
 import com.calebe.apiapplication.repository.InMemoryEmployeeRepository;
 import com.calebe.apiapplication.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Qualifier(value = "inMemoryEmployeeService")
 public class InMemoryEmployeeServiceImpl implements EmployeeService {
 
     private final InMemoryEmployeeRepository inMemoryEmployeeRepository;

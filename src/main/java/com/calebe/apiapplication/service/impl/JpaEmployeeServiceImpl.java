@@ -4,12 +4,14 @@ import com.calebe.apiapplication.domain.Employee;
 import com.calebe.apiapplication.repository.JpaEmployeeRepository;
 import com.calebe.apiapplication.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Qualifier(value = "mySQLEmployeeService")
 public class JpaEmployeeServiceImpl implements EmployeeService {
    private final JpaEmployeeRepository jpaEmployeeRepository;
     @Override
