@@ -47,7 +47,7 @@ public class EmployeeResource {
         return ResponseEntity.ok(employeeService.deleteById(id));
     }
 
-    private URI getLocation(Integer id) {
+    protected static URI getLocation(Integer id) {
         return ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("{id}")
                 .buildAndExpand(id)
