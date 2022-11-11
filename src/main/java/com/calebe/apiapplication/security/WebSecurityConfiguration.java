@@ -20,7 +20,7 @@ public class WebSecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
-        authenticationManagerBuilder.authenticationProvider(null);
+        authenticationManagerBuilder.authenticationProvider(authenticationProvider);
         http.csrf().disable();
         http.authorizeRequests()
                         .antMatchers(HttpMethod.POST, "/api/accounts/**").permitAll();
