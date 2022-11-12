@@ -1,7 +1,7 @@
-package com.calebe.apiapplication.init;
+package com.calebe.api.init;
 
-import com.calebe.apiapplication.domain.Role;
-import com.calebe.apiapplication.repository.RoleRepository;
+import com.calebe.api.domain.Role;
+import com.calebe.api.repository.RoleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

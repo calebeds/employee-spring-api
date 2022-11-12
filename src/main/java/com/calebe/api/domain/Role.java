@@ -1,4 +1,4 @@
-package com.calebe.apiapplication.domain;
+package com.calebe.api.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

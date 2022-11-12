@@ -1,6 +1,6 @@
-package com.calebe.apiapplication.repository;
+package com.calebe.api.repository;
 
-import com.calebe.apiapplication.domain.Employee;
+import com.calebe.api.domain.Employee;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

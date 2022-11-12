@@ -1,4 +1,4 @@
-package com.calebe.apiapplication;
+package com.calebe.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

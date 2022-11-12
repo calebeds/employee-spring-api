@@ -1,7 +1,7 @@
-package com.calebe.apiapplication.resources;
+package com.calebe.api.resources;
 
-import com.calebe.apiapplication.domain.Employee;
-import com.calebe.apiapplication.service.EmployeeService;
+import com.calebe.api.domain.Employee;
+import com.calebe.api.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

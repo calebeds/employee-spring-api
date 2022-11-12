@@ -1,6 +1,6 @@
-package com.calebe.apiapplication.repository;
+package com.calebe.api.repository;
 
-import com.calebe.apiapplication.domain.Role;
+import com.calebe.api.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

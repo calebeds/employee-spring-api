@@ -1,6 +1,6 @@
-package com.calebe.apiapplication.service;
+package com.calebe.api.service;
 
-import com.calebe.apiapplication.domain.Employee;
+import com.calebe.api.domain.Employee;
 
 import java.util.List;
 

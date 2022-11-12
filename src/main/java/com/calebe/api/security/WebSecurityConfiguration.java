@@ -1,4 +1,4 @@
-package com.calebe.apiapplication.security;
+package com.calebe.api.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

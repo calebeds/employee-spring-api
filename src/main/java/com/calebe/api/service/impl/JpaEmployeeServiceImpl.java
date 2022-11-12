@@ -1,8 +1,8 @@
-package com.calebe.apiapplication.service.impl;
+package com.calebe.api.service.impl;
 
-import com.calebe.apiapplication.domain.Employee;
-import com.calebe.apiapplication.repository.JpaEmployeeRepository;
-import com.calebe.apiapplication.service.EmployeeService;
+import com.calebe.api.domain.Employee;
+import com.calebe.api.repository.JpaEmployeeRepository;
+import com.calebe.api.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

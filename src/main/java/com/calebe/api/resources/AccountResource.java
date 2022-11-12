@@ -1,7 +1,7 @@
-package com.calebe.apiapplication.resources;
+package com.calebe.api.resources;
 
-import com.calebe.apiapplication.domain.Account;
-import com.calebe.apiapplication.service.AccountService;
+import com.calebe.api.domain.Account;
+import com.calebe.api.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
