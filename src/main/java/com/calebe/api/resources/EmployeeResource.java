@@ -4,12 +4,15 @@ import com.calebe.api.domain.Employee;
 import com.calebe.api.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
+@Valid
 @RestController
 @RequestMapping(path = "/api/employees")
 //@RequiredArgsConstructor
@@ -31,10 +34,12 @@ public class EmployeeResource {
         return ResponseEntity.ok(employeeService.findById(id));
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
-        employee.setId(employeeService.getAllEmployees().size() + 1);
-        return ResponseEntity.created(getLocation(employee.getId())).body(employeeService.addEmployee(employee));
+//        employee.setId(employeeService.getAllEmployees().size() + 1);
+        employeeService.addEmployee(employee);
+        return ResponseEntity.created(getLocation(employee.getId())).body(employee);
     }
 
     @PutMapping
