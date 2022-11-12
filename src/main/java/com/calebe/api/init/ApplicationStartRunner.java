@@ -14,8 +14,8 @@ public class ApplicationStartRunner implements CommandLineRunner {
     private final RoleRepository roleRepository;
     @Override
     public void run(String... args) throws Exception {
-        Role roleUser = new Role(1L, "123", "ROLE_USER");
         Role roleAdmin = new Role(1L, "456", "ROLE_ADMIN");
+        Role roleUser = new Role(1L, "123", "ROLE_USER");
         roleRepository.saveAll(Arrays.asList(roleUser, roleAdmin));
     }
 }
